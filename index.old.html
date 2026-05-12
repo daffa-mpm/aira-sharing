@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Lokal vs Cloud — Panduan Strategis 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css">
+<style>
+/* ═══ RESET & BASE ═══ */
+:root {
+  --background: oklch(0.9607 0.0017 247.8395);
+  --foreground: oklch(0.2350 0.0100 260);
+  --card: oklch(1.0000 0 0);
+  --card-foreground: oklch(0.2350 0.0100 260);
+  --primary: oklch(0.5850 0.1650 43.5);
+  --primary-foreground: oklch(1.0000 0 0);
+  --secondary: oklch(0.9670 0.0029 264.5419);
+  --secondary-foreground: oklch(0.3250 0.0250 256.8);
+  --muted: oklch(0.9846 0.0017 247.8389);
+  --muted-foreground: oklch(0.3950 0.0220 264.3);
+  --accent: oklch(0.8750 0.0200 244);
+  --accent-foreground: oklch(0.2850 0.0850 258);
+  --destructive: oklch(0.6368 0.2078 25.3313);
+  --destructive-foreground: oklch(1.0000 0 0);
+  --border: oklch(0.8000 0.0100 248);
+  --input: oklch(0.9700 0.0029 264.5420);
+  --ring: oklch(0.6397 0.1720 36.4421);
+  --sidebar: oklch(0.9700 0.0029 264.5420);
+  --sidebar-foreground: oklch(0.2350 0.0100 260);
+  --sidebar-primary: oklch(0.6397 0.1720 36.4421);
+  --sidebar-primary-foreground: oklch(1.0000 0 0);
+  --sidebar-accent: oklch(0.9119 0.0222 243.8174);
+  --sidebar-border: oklch(0.9276 0.0058 264.5313);
+  --font-sans: Inter, sans-serif;
+  --font-serif: 'Source Serif 4', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.75rem;
+  --shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 1px 2px -1px hsl(0 0% 0% / 0.10);
+  --shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 2px 4px -1px hsl(0 0% 0% / 0.10);
+  --shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.10), 0px 4px 6px -1px hsl(0 0% 0% / 0.10);
+
+  /* Semantic aliases used throughout */
+  --bg:      var(--background);
+  --bg2:     var(--card);
+  --bg3:     var(--accent);
+  --gold:    var(--primary);
+  --gold2:   oklch(0.6400 0.1200 40);
+  --teal:    oklch(0.5000 0.0950 242);
+  --red:     var(--destructive);
+  --green:   oklch(0.5200 0.1350 155);
+  --text:    var(--foreground);
+  --muted:   var(--muted-foreground);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: oklch(0.2598 0.0306 262.6666);
+    --foreground: oklch(0.9219 0 0);
+    --card: oklch(0.3106 0.0301 268.6365);
+    --card-foreground: oklch(0.9219 0 0);
+    --primary: oklch(0.6397 0.1720 36.4421);
+    --primary-foreground: oklch(1.0000 0 0);
+    --secondary: oklch(0.3095 0.0266 266.7132);
+    --secondary-foreground: oklch(0.9219 0 0);
+    --muted: oklch(0.3095 0.0266 266.7132);
+    --muted-foreground: oklch(0.8000 0 0);
+    --accent: oklch(0.3850 0.0500 267.6);
+    --accent-foreground: oklch(0.8823 0.0571 254.1284);
+    --destructive: oklch(0.6368 0.2078 25.3313);
+    --border: oklch(0.4800 0.0250 269.7);
+    --input: oklch(0.3843 0.0301 269.7337);
+    --ring: oklch(0.6397 0.1720 36.4421);
+    --sidebar: oklch(0.3100 0.0283 267.7408);
+    --sidebar-foreground: oklch(0.9219 0 0);
+    --sidebar-primary: oklch(0.6397 0.1720 36.4421);
+    --sidebar-border: oklch(0.3843 0.0301 269.7337);
+    --bg:  oklch(0.2598 0.0306 262.6666);
+    --bg2: oklch(0.3106 0.0301 268.6365);
+    --bg3: oklch(0.3850 0.0500 267.6);
+    --gold: oklch(0.6397 0.1720 36.4421);
+    --teal: oklch(0.7600 0.0900 242);
+    --green: oklch(0.7600 0.1350 155);
+    --text: oklch(0.9219 0 0);
+    --muted: oklch(0.8000 0 0);
+  }
+}
+
+.reveal {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  background: var(--background);
+  color: var(--foreground);
+}
+.reveal .slides section {
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* ═══ SLIDE LAYOUTS ═══ */
+.slide-full {
+  width: 100%;
+  height: 100%;
+  padding: 56px 72px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  background: var(--background);
+}
+.slide-split {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+  height: 100%;
+}
+.split-left, .split-right {
+  padding: 56px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.split-left { background: var(--card); border-right: 2px solid var(--border); }
+.split-right { background: var(--background); }
+
+/* ═══ TYPOGRAPHY ═══ */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.52em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--primary);
+}
+
+h1.slide-title {
+  font-family: var(--font-sans);
+  font-size: 2.4em;
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--foreground);
+  margin: 0 0 22px 0;
+  letter-spacing: -0.02em;
+}
+h2.slide-title {
+  font-family: var(--font-sans);
+  font-size: 1.85em;
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--foreground);
+  margin: 0 0 18px 0;
+  letter-spacing: -0.015em;
+}
+h3.card-title {
+  font-family: var(--font-sans);
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 10px 0;
+}
+.accent { color: var(--primary); }
+.accent-teal { color: var(--teal); }
+.lead {
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+  margin-bottom: 24px;
+}
+
+/* ═══ BULLET LISTS — BIG & CLEAR ═══ */
+.bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bullets li {
+  font-size: 1em;
+  line-height: 1.55;
+  padding: 11px 0 11px 32px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  color: var(--foreground);
+}
+.bullets li:first-child { border-top: 1px solid var(--border); }
+.bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  color: var(--primary);
+  font-size: 0.65em;
+  line-height: 2;
+}
+.bullets li strong { color: var(--foreground); font-weight: 600; }
+.bullets li .sub {
+  display: block;
+  font-size: 0.77em;
+  color: var(--muted-foreground);
+  margin-top: 3px;
+}
+
+/* ═══ NUMBERED POINTS ═══ */
+.num-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.num-list li {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.num-list li .n {
+  font-family: var(--font-sans);
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0.5;
+  min-width: 34px;
+  line-height: 1.3;
+}
+.num-list li .body { flex: 1; }
+.num-list li .body strong {
+  display: block;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 3px;
+}
+.num-list li .body span {
+  font-size: 0.82em;
+  color: var(--muted-foreground);
+  line-height: 1.55;
+}
+
+/* ═══ CARDS ═══ */
+.card-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+.card-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 20px 20px;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-sm);
+}
+.card.teal { border-top-color: var(--teal); }
+.card.red  { border-top-color: var(--red); }
+.card.green { border-top-color: var(--green); }
+.card-icon { font-size: 1.6em; margin-bottom: 8px; display: block; }
+.card p {
+  font-size: 0.82em;
+  line-height: 1.65;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+/* ═══ BIG STAT ═══ */
+.stat-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+.stat-box {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+.stat-box .num {
+  font-family: var(--font-sans);
+  font-size: 2.4em;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.stat-box .label {
+  font-size: 0.7em;
+  color: var(--muted-foreground);
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+/* ═══ VS DIVIDER ═══ */
+.vs-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0;
+}
+.vs-bar .line { flex: 1; height: 1px; background: var(--border); }
+.vs-bar .vs {
+  font-family: var(--font-sans);
+  font-size: 0.72em;
+  font-weight: 600;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: calc(var(--radius) - 2px);
+  padding: 3px 12px;
+}
+
+/* ═══ TABLE ═══ */
+.slide-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78em;
+}
+.slide-table th {
+  font-family: var(--font-mono);
+  font-size: 0.68em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  padding: 9px 14px;
+  border-bottom: 2px solid var(--primary);
+  text-align: left;
+  background: var(--card);
+}
+.slide-table td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--foreground);
+  vertical-align: middle;
+  line-height: 1.45;
+  background: var(--card);
+}
+.slide-table tr:hover td { background: var(--accent); }
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.68em;
+  padding: 3px 9px;
+  border: 1px solid;
+  border-radius: calc(var(--radius) - 4px);
+  white-space: nowrap;
+  display: inline-block;
+  font-weight: 500;
+}
+.badge-local  { border-color: var(--teal);  color: var(--teal);  background: color-mix(in oklch, var(--teal) 10%, transparent); }
+.badge-cloud  { border-color: var(--primary); color: var(--primary); background: color-mix(in oklch, var(--primary) 10%, transparent); }
+.badge-hybrid { border-color: oklch(0.65 0.18 50); color: oklch(0.65 0.18 50); background: color-mix(in oklch, oklch(0.65 0.18 50) 10%, transparent); }
+.badge-edge   { border-color: var(--muted-foreground); color: var(--muted-foreground); background: color-mix(in oklch, var(--muted-foreground) 10%, transparent); }
+.badge-free   { border-color: var(--green); color: var(--green); background: color-mix(in oklch, var(--green) 10%, transparent); }
+
+/* ═══ PROGRESS BAR ═══ */
+.reveal .progress { background: var(--border); height: 3px; }
+.reveal .progress span { background: var(--primary); }
+
+/* ═══ SLIDE COUNTER (custom) ═══ */
+.slide-counter {
+  position: fixed;
+  bottom: 24px;
+  right: 32px;
+  font-family: var(--font-mono);
+  font-size: 0.52em;
+  color: var(--muted-foreground);
+  z-index: 30;
+  pointer-events: none;
+}
+
+/* ═══ HERO SPECIFIC ═══ */
+.hero-bg {
+  background: var(--card) !important;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, color-mix(in oklch, var(--primary) 8%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-tag {
+  display: inline-block;
+  background: color-mix(in oklch, var(--primary) 10%, transparent);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.48em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: calc(var(--radius) - 2px);
+  margin-bottom: 20px;
+}
+
+/* ═══ DIAGRAM (pure CSS) ═══ */
+.diagram-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  height: 100%;
+  justify-content: center;
+  padding: 36px;
+}
+.diag-box {
+  border: 1.5px solid;
+  border-radius: var(--radius);
+  padding: 16px 24px;
+  text-align: center;
+  min-width: 170px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.82em;
+}
+.diag-cloud { border-color: var(--teal); color: var(--teal); background: color-mix(in oklch, var(--teal) 8%, transparent); }
+.diag-org   { border-color: var(--primary); color: var(--primary); background: color-mix(in oklch, var(--primary) 8%, transparent); }
+.diag-local { border-color: var(--muted-foreground); color: var(--muted-foreground); background: color-mix(in oklch, var(--muted-foreground) 6%, transparent); }
+.diag-arrow {
+  font-size: 1.3em;
+  color: var(--border);
+  line-height: 1;
+  margin: 3px 0;
+}
+.diag-label {
+  font-family: var(--font-mono);
+  font-size: 0.46em;
+  color: var(--muted-foreground);
+  letter-spacing: 0.08em;
+  margin: 2px 0;
+}
+
+/* ═══ METER / BAR ═══ */
+.meter-group { margin-bottom: 14px; }
+.meter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.meter-name {
+  font-size: 0.7em;
+  color: var(--muted-foreground);
+  min-width: 155px;
+  flex-shrink: 0;
+}
+.meter-track {
+  flex: 1;
+  height: 7px;
+  background: var(--border);
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+}
+.meter-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+  transition: width 1.5s ease;
+}
+.meter-fill.teal { background: var(--teal); }
+.meter-val {
+  font-family: var(--font-mono);
+  font-size: 0.63em;
+  color: var(--primary);
+  min-width: 32px;
+  text-align: right;
+}
+
+/* ═══ SECTION DIVIDER SLIDE ═══ */
+.divider-slide {
+  background: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center !important;
+}
+.divider-slide h2 {
+  font-family: var(--font-sans);
+  font-size: 2.4em;
+  font-weight: 700;
+  color: var(--primary-foreground);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+.divider-slide .num-big {
+  font-family: var(--font-sans);
+  font-size: 4.8em;
+  font-weight: 700;
+  color: color-mix(in oklch, var(--primary-foreground) 18%, transparent);
+  line-height: 1;
+  margin-bottom: -12px;
+}
+
+/* ═══ CONTROLS STYLE ═══ */
+.reveal .controls button {
+  color: var(--primary) !important;
+  opacity: 0.6;
+}
+.reveal .controls button:hover { opacity: 1 !important; }
+
+/* ═══ NAV THUMBNAILS (custom bottom nav) ═══ */
+#slide-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: 48px;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  z-index: 50;
+  padding: 0 14px;
+  overflow-x: auto;
+  box-shadow: 0 -1px 0 var(--border);
+}
+.nav-dot {
+  flex-shrink: 0;
+  height: 26px;
+  padding: 0 10px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 4px);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-foreground);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  transition: all 0.15s;
+}
+.nav-dot:hover { background: var(--accent); color: var(--accent-foreground); border-color: var(--primary); }
+.nav-dot.active { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); font-weight: 600; }
+
+.reveal .slides { margin-bottom: 48px; }
+
+/* keyboard hint */
+.key-hint {
+  position: fixed;
+  bottom: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted-foreground);
+  letter-spacing: 0.08em;
+  z-index: 40;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0.6;
+}
+</style>
+</head>
+<body>
+
+<div class="reveal">
+<div class="slides">
+
+<!-- ══════════════════════════ SLIDE 1 — HERO ══════════════════════════ -->
+<section>
+<div class="slide-full hero-bg">
+  <div class="hero-tag">Laporan Riset Komprehensif · 2026</div>
+  <div class="eyebrow">Transformasi Digital Indonesia</div>
+  <h1 class="slide-title" style="font-size:2.8em;line-height:1.05">
+    AI <span class="accent">Lokal</span> vs<br>AI <span class="accent-teal">Cloud</span>
+  </h1>
+  <p class="lead" style="font-size:1.1em;max-width:580px">
+    Panduan strategis implementasi Kecerdasan Buatan untuk organisasi — dari startup hingga institusi pemerintah Indonesia.
+  </p>
+  <div class="stat-row" style="max-width:620px">
+    <div class="stat-box">
+      <div class="num">8</div>
+      <div class="label">Topik Bahasan</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">3</div>
+      <div class="label">Studi Kasus Nyata</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">1</div>
+      <div class="label">Strategi Hibrida</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 2 — AGENDA ══════════════════════════ -->
+<section>
+<div class="slide-full">
+  <div class="eyebrow">Agenda</div>
+  <h2 class="slide-title">Yang Akan Kita Pelajari</h2>
+  <div class="card-grid-2">
+    <div class="card">
+      <span class="card-icon">🏗️</span>
+      <h3 class="card-title">01 · Konsep Dasar</h3>
+      <p>Apa itu AI Lokal dan AI Cloud? Analogi sederhana untuk memahami perbedaan fundamentalnya</p>
+    </div>
+    <div class="card teal">
+      <span class="card-icon">⚡</span>
+      <h3 class="card-title" style="color:var(--teal)">02 · Kecepatan & Performa</h3>
+      <p>Latensi vs kapasitas komputasi — dua dimensi "cepat" yang berbeda</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">💰</span>
+      <h3 class="card-title">03 · Analisis Biaya</h3>
+      <p>Total Cost of Ownership, titik balik modal, dan jebakan biaya tersembunyi</p>
+    </div>
+    <div class="card red">
+      <span class="card-icon">🛡️</span>
+      <h3 class="card-title" style="color:var(--red)">04 · Privasi & Regulasi</h3>
+      <p>UU PDP No. 27/2022, kedaulatan data, dan risiko hukum penggunaan cloud</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">🏥</span>
+      <h3 class="card-title">05 · Studi Kasus Sektoral</h3>
+      <p>Kesehatan, Pendidikan, dan Ritel/Pemerintah Indonesia</p>
+    </div>
+    <div class="card green">
+      <span class="card-icon">🗺️</span>
+      <h3 class="card-title" style="color:var(--green)">06 · Strategi Hibrida</h3>
+      <p>Framework perutean tugas: kapan lokal, kapan cloud, kapan hibrid</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ DIVIDER 1 ══════════════════════════ -->
+<section>
+<div class="slide-full divider-slide">
+  <div class="num-big">01</div>
+  <h2>Konsep Dasar</h2>
+  <p style="font-family:var(--font-mono);font-size:0.52em;color:color-mix(in oklch,var(--primary-foreground) 55%,transparent);margin-top:10px;letter-spacing:0.12em;text-transform:uppercase">Memahami ekosistem AI melalui analogi sehari-hari</p>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 3 — CLOUD ANALOGY ══════════════════════════ -->
+<section>
+<div class="slide-split">
+  <div class="split-left">
+    <div class="eyebrow">AI Eksternal</div>
+    <h2 class="slide-title">AI Cloud<br><span class="accent-teal">= Naik Taksi</span></h2>
+    <p class="lead">Infrastruktur dimiliki & dikelola penyedia (AWS, Google, Azure). Anda cukup bayar pakai.</p>
+    <ul class="bullets">
+      <li><strong>Tanpa investasi awal</strong> — tidak perlu beli server atau GPU
+        <span class="sub">Langsung pakai dalam hitungan menit</span>
+      </li>
+      <li><strong>Skalabilitas instan</strong> — dari 10 ke 1 juta pengguna otomatis</li>
+      <li><strong>Model AI terkuat di dunia</strong> — GPT-4, Claude, Gemini</li>
+      <li><strong>Bayar sesuai pemakaian</strong> — per token, per API call</li>
+    </ul>
+  </div>
+  <div class="split-right">
+    <div class="diagram-container">
+      <div class="diag-box diag-cloud" style="font-size:0.9em">☁️ Server Penyedia</div>
+      <div class="diag-label">AWS · Google · Azure</div>
+      <div class="diag-arrow">⬆⬇</div>
+      <div class="diag-label" style="color:var(--red);font-size:0.48em">⚠ Data melintas internet publik</div>
+      <div class="diag-arrow">⬆⬇</div>
+      <div class="diag-box diag-org">🏢 Organisasi Anda</div>
+      <div style="margin-top:28px;padding:16px;border:1px solid rgba(239,68,68,0.3);background:rgba(239,68,68,0.06)">
+        <p style="font-family:var(--font-mono);font-size:0.48em;color:var(--red);letter-spacing:0.1em;margin:0 0 6px">RISIKO UTAMA</p>
+        <p style="font-size:0.72em;color:var(--muted);margin:0;line-height:1.5">Data sensitif dikirim ke server asing. Bergantung koneksi internet. Biaya naik eksponensial saat volume tinggi.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 4 — LOCAL ANALOGY ══════════════════════════ -->
+<section>
+<div class="slide-split">
+  <div class="split-left" style="background:var(--bg3);border-right:3px solid var(--teal)">
+    <div class="eyebrow" style="color:var(--teal)">AI Internal</div>
+    <h2 class="slide-title">AI Lokal<br><span style="color:var(--teal)">= Punya Mobil Sendiri</span></h2>
+    <p class="lead">AI berjalan di atas perangkat keras milik organisasi. Data tidak pernah keluar.</p>
+    <ul class="bullets">
+      <li><strong>Privasi absolut</strong> — data tidak pernah meninggalkan kantor
+        <span class="sub">Wajib untuk data medis, hukum, keuangan</span>
+      </li>
+      <li><strong>Latensi nol</strong> — respons instan, bekerja tanpa internet</li>
+      <li><strong>Kontrol penuh</strong> — modifikasi model sesuai kebutuhan spesifik</li>
+      <li><strong>Biaya tetap</strong> — tidak ada tagihan per-token yang mengejutkan</li>
+    </ul>
+  </div>
+  <div class="split-right">
+    <div class="diagram-container">
+      <div style="border:2px dashed var(--border);padding:28px;width:100%;box-sizing:border-box">
+        <p style="font-family:var(--font-mono);font-size:0.5em;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px">🔒 BATAS JARINGAN ORGANISASI</p>
+        <div class="diag-box diag-org" style="margin-bottom:12px">🏢 Organisasi Anda</div>
+        <div class="diag-arrow">⬆⬇</div>
+        <div class="diag-box diag-local">🖥️ Server / GPU Lokal</div>
+        <div class="diag-arrow">⬆⬇</div>
+        <div class="diag-box" style="border:1px solid var(--green);color:var(--green);background:rgba(34,197,94,0.08);padding:14px 22px;text-align:center;font-family:var(--font-sans);font-weight:700;font-size:0.8em">✓ DATA AMAN DI DALAM</div>
+      </div>
+      <div style="margin-top:16px;padding:14px;border:1px solid rgba(240,180,41,0.3);background:rgba(240,180,41,0.04)">
+        <p style="font-size:0.72em;color:var(--muted);margin:0;line-height:1.5">Tools populer: <span style="color:var(--gold)">Ollama · LM Studio · ComfyUI</span><br>Model: Llama 3, Mistral, Qwen, Phi</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 5 — HARDWARE ══════════════════════════ -->
+<section>
+<div class="slide-full">
+  <div class="eyebrow">Infrastruktur</div>
+  <h2 class="slide-title">Anatomi Perangkat Keras AI</h2>
+  <div class="card-grid-3">
+    <div class="card teal">
+      <span class="card-icon">🧠</span>
+      <h3 class="card-title" style="color:var(--teal)">CPU</h3>
+      <p>Manajer proyek cerdas — bisa banyak tugas tapi hanya beberapa sekaligus. <strong style="color:var(--text)">Tidak cukup untuk AI berat.</strong></p>
+    </div>
+    <div class="card">
+      <span class="card-icon">⚡</span>
+      <h3 class="card-title">GPU</h3>
+      <p>Ribuan "pekerja pabrik" paralel. Wajib untuk training dan inference AI. <strong style="color:var(--gold)">Komponen termahal AI lokal.</strong></p>
+    </div>
+    <div class="card green">
+      <span class="card-icon">🔬</span>
+      <h3 class="card-title" style="color:var(--green)">NPU (Chip AI)</h3>
+      <p>Chip khusus AI di laptop modern (Copilot+ PC). Hemat daya, cukup untuk model kecil sehari-hari tanpa server.</p>
+    </div>
+  </div>
+  <div style="margin-top:20px;padding:20px 24px;background:var(--bg3);border-left:4px solid var(--gold)">
+    <p style="font-size:0.88em;line-height:1.6;color:var(--text);margin:0">
+      💡 <strong style="color:var(--gold)">Model populer untuk lokal:</strong> Llama 3 (Meta) · Mistral · Qwen (Alibaba) · Phi (Microsoft) — bisa berjalan di komputer biasa dengan RAM 8–16GB untuk tugas ringan
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ DIVIDER 2 ══════════════════════════ -->
+<section>
+<div class="slide-full divider-slide">
+  <div class="num-big">02</div>
+  <h2>Kecepatan & Performa</h2>
+  <p style="font-family:var(--font-mono);font-size:0.52em;color:color-mix(in oklch,var(--primary-foreground) 55%,transparent);margin-top:10px;letter-spacing:0.12em;text-transform:uppercase">Dua definisi "cepat" yang berbeda</p>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 6 — SPEED ══════════════════════════ -->
+<section>
+<div class="slide-split">
+  <div class="split-left">
+    <div class="eyebrow">AI Lokal</div>
+    <h2 class="slide-title">Cepat<br><span class="accent">Memulai Tugas</span></h2>
+    <p class="lead">Latensi = NOL. Tidak ada jeda jaringan, tidak ada antrian server.</p>
+    <div class="meter-group">
+      <div class="meter-row"><span class="meter-name">Latensi Respons</span><div class="meter-track"><div class="meter-fill" style="width:95%"></div></div><span class="meter-val">★★★★★</span></div>
+      <div class="meter-row"><span class="meter-name">Ketersediaan Offline</span><div class="meter-track"><div class="meter-fill" style="width:100%"></div></div><span class="meter-val">★★★★★</span></div>
+      <div class="meter-row"><span class="meter-name">Privasi Data</span><div class="meter-track"><div class="meter-fill" style="width:100%"></div></div><span class="meter-val">★★★★★</span></div>
+      <div class="meter-row"><span class="meter-name">Kapasitas Tugas Berat</span><div class="meter-track"><div class="meter-fill" style="width:30%"></div></div><span class="meter-val">★★☆☆☆</span></div>
+    </div>
+    <div style="padding:14px 18px;background:rgba(240,180,41,0.08);border:1px solid var(--border);margin-top:8px">
+      <p style="font-size:0.78em;color:var(--muted);margin:0"><strong style="color:var(--gold)">Ideal untuk:</strong> Klasifikasi sentimen · Ekstraksi faktur · Asisten suara real-time · Pemrosesan data berulang</p>
+    </div>
+  </div>
+  <div class="split-right">
+    <div class="eyebrow" style="color:var(--teal)">AI Cloud</div>
+    <h2 class="slide-title">Cepat<br><span style="color:var(--teal)">Menyelesaikan Tugas Berat</span></h2>
+    <p class="lead">Ribuan GPU paralel. Analisis 1.000 halaman dokumen dalam hitungan menit.</p>
+    <div class="meter-group">
+      <div class="meter-row"><span class="meter-name">Latensi Respons</span><div class="meter-track"><div class="meter-fill teal" style="width:45%"></div></div><span class="meter-val" style="color:var(--teal)">★★★☆☆</span></div>
+      <div class="meter-row"><span class="meter-name">Ketersediaan Offline</span><div class="meter-track"><div class="meter-fill teal" style="width:0%"></div></div><span class="meter-val" style="color:var(--teal)">✕ N/A</span></div>
+      <div class="meter-row"><span class="meter-name">Privasi Data</span><div class="meter-track"><div class="meter-fill teal" style="width:20%"></div></div><span class="meter-val" style="color:var(--teal)">★★☆☆☆</span></div>
+      <div class="meter-row"><span class="meter-name">Kapasitas Tugas Berat</span><div class="meter-track"><div class="meter-fill teal" style="width:98%"></div></div><span class="meter-val" style="color:var(--teal)">★★★★★</span></div>
+    </div>
+    <div style="padding:14px 18px;background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.3);margin-top:8px">
+      <p style="font-size:0.78em;color:var(--muted);margin:0"><strong style="color:var(--teal)">Ideal untuk:</strong> Analisis dokumen masif · Penalaran mendalam · Riset ilmiah · Pembuatan gambar AI</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ DIVIDER 3 ══════════════════════════ -->
+<section>
+<div class="slide-full divider-slide">
+  <div class="num-big">03</div>
+  <h2>Analisis Biaya</h2>
+  <p style="font-family:var(--font-mono);font-size:0.52em;color:color-mix(in oklch,var(--primary-foreground) 55%,transparent);margin-top:10px;letter-spacing:0.12em;text-transform:uppercase">Total Cost of Ownership yang sering disalahpahami</p>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 7 — PRICING ══════════════════════════ -->
+<section>
+<div class="slide-full">
+  <div class="eyebrow">Struktur Biaya Cloud</div>
+  <h2 class="slide-title">Paket Berlangganan AI Cloud</h2>
+  <div class="cost-table-wrap" style="overflow-x:auto">
+    <table class="slide-table">
+      <thead>
+        <tr>
+          <th>Paket</th>
+          <th>Biaya / Bulan</th>
+          <th>Pengguna</th>
+          <th>Kegunaan Utama</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Dasar / Gratis</strong></td>
+          <td><span class="badge badge-free">$0</span></td>
+          <td>1 individu</td>
+          <td>Eksplorasi awal, tugas sederhana sesekali</td>
+        </tr>
+        <tr>
+          <td><strong>Plus</strong></td>
+          <td>~$20</td>
+          <td>1 individu</td>
+          <td>Penggunaan profesional tingkat individu</td>
+        </tr>
+        <tr>
+          <td><strong>Pro</strong></td>
+          <td>~$200</td>
+          <td>1 individu</td>
+          <td>Penalaran intensif, tanpa batas kuota</td>
+        </tr>
+        <tr>
+          <td><strong>Bisnis / Tim</strong></td>
+          <td>~$30/org</td>
+          <td>≥2 anggota</td>
+          <td>Kolaborasi dokumen & pelaporan bersama</td>
+        </tr>
+        <tr>
+          <td><strong>Enterprise</strong></td>
+          <td>Custom</td>
+          <td>~150+</td>
+          <td>Privasi korporat, pengawasan kepatuhan ketat</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top:16px;padding:16px 20px;background:rgba(239,68,68,0.08);border-left:3px solid var(--red)">
+    <p style="font-size:0.82em;color:var(--text);margin:0;line-height:1.5">
+      ⚠️ <strong style="color:var(--red)">Jebakan Biaya Tersembunyi:</strong> Tagihan dihitung per <em>token</em> (pecahan suku kata). Saat dipakai untuk ribuan interaksi otomatis per hari, biaya bisa <strong>membengkak eksponensial</strong> di luar kendali anggaran.
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 8 — TCO ══════════════════════════ -->
+<section>
+<div class="slide-full">
+  <div class="eyebrow">Total Cost of Ownership</div>
+  <h2 class="slide-title">Kapan AI Lokal Lebih Hemat?</h2>
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="num" style="font-size:2.2em">500K</div>
+      <div class="label">Token / hari = Titik Balik Modal</div>
+    </div>
+    <div class="stat-box">
+      <div class="num" style="color:var(--teal);font-size:2.2em">€2–2.5K</div>
+      <div class="label">Biaya SDM ML Engineer / bulan</div>
+    </div>
+    <div class="stat-box">
+      <div class="num" style="color:var(--green);font-size:2.2em">20%</div>
+      <div class="label">Fokus operasional teknisi untuk pemeliharaan</div>
+    </div>
+  </div>
+  <div class="card-grid-2" style="margin-top:20px">
+    <div class="card" style="border-top-color:var(--teal)">
+      <h3 class="card-title" style="color:var(--teal)">☁️ Cloud: Biaya di Belakang</h3>
+      <p>Murah di awal. Biaya naik seiring volume. Cocok untuk volume kecil atau beban kerja tidak teratur dan tidak dapat diprediksi.</p>
+    </div>
+    <div class="card">
+      <h3 class="card-title">🖥️ Lokal: Biaya di Depan</h3>
+      <p>Mahal di awal (GPU, cooling, SDM). Setelah modal balik, biaya operasional sangat rendah meskipun volume tak terbatas.</p>
+    </div>
+  </div>
+  <div style="margin-top:16px;padding:14px 20px;border:1px solid var(--border);background:rgba(240,180,41,0.04)">
+    <p style="font-size:0.82em;color:var(--muted);margin:0">⚠️ Waspadai <strong style="color:var(--gold)">vendor lock-in</strong>: Ratusan jam prompt engineering di satu platform cloud akan menyulitkan migrasi ke provider lain di masa depan.</p>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ DIVIDER 4 ══════════════════════════ -->
+<section>
+<div class="slide-full divider-slide">
+  <div class="num-big">04</div>
+  <h2>Privasi & Regulasi</h2>
+  <p style="font-family:var(--font-mono);font-size:0.52em;color:color-mix(in oklch,var(--primary-foreground) 55%,transparent);margin-top:10px;letter-spacing:0.12em;text-transform:uppercase">Kedaulatan data di Nusantara</p>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 9 — PRIVACY ══════════════════════════ -->
+<section>
+<div class="slide-full">
+  <div class="eyebrow">Kerangka Hukum Indonesia</div>
+  <h2 class="slide-title">Regulasi yang Wajib Dipatuhi</h2>
+  <div class="card-grid-3">
+    <div class="card red">
+      <span class="card-icon">⚖️</span>
+      <h3 class="card-title" style="color:var(--red)">UU PDP No. 27/2022</h3>
+      <p>Hak subjek data dan kewajiban pengelola. Berlaku untuk semua entitas yang berdampak pada penduduk Indonesia — termasuk algoritma AI.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">📱</span>
+      <h3 class="card-title">UU ITE No. 19/2016</h3>
+      <p>Mengatur transaksi elektronik dan informasi digital, termasuk perlakuan data oleh sistem otomatis dan kecerdasan buatan.</p>
+    </div>
+    <div class="card teal">
+      <span class="card-icon">🌍</span>
+      <h3 class="card-title" style="color:var(--teal)">GDPR (Referensi Global)</h3>
+      <p>Kerangka Uni Eropa yang berlaku jika data warga EU diproses. Mengirim data ke cloud asing dapat memicu kewajiban Pasal 28.</p>
+    </div>
+  </div>
+  <div style="margin-top:20px;padding:18px 22px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.3)">
+    <p style="font-size:0.88em;line-height:1.6;color:var(--text);margin:0">
+      🚨 <strong style="color:var(--red)">Contoh Pelanggaran Nyata:</strong> Ketika staf HR menyalin daftar kandidat berisi NIK ke chatbot cloud untuk diringkas — secara hukum mereka telah <strong>mengirim data pribadi ke negara ketiga tanpa izin</strong>, melanggar UU PDP.
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 10 — RISKS ══════════════════════════ -->
+<section>
+<div class="slide-full">
+  <div class="eyebrow">Risiko Strategis</div>
+  <h2 class="slide-title">Ancaman yang Sering Diabaikan</h2>
+  <ul class="bullets" style="font-size:1.05em">
+    <li>
+      <strong>Kebocoran Kekayaan Intelektual (IP Leak)</strong>
+      <span class="sub">Cetak biru teknologi yang dikirim ke cloud komersial terpapar langsung kepada entitas penyedia — meskipun ada perjanjian kerahasiaan</span>
+    </li>
+    <li>
+      <strong>Ketergantungan Penyedia (Vendor Lock-in)</strong>
+      <span class="sub">Jika API cloud tumbang atau harga naik sepihak, seluruh sistem otomatis organisasi bisa mati seketika tanpa peringatan</span>
+    </li>
+    <li>
+      <strong>Kerentanan Rantai Pasok (NIS2 Eropa 2024)</strong>
+      <span class="sub">Regulasi terbaru mengklasifikasikan API cloud eksternal sebagai titik kerentanan supply chain yang harus diaudit</span>
+    </li>
+    <li>
+      <strong>Risiko Tersembunyi AI Lokal: Backup Cloud</strong>
+      <span class="sub">File percakapan AI lokal (.json) sering tersinkronisasi otomatis ke Google Drive/Dropbox/OneDrive — menganulir seluruh upaya privasi lokal</span>
+    </li>
+  </ul>
+</div>
+</section>
+
+<!-- ══════════════════════════ DIVIDER 5 ══════════════════════════ -->
+<section>
+<div class="slide-full divider-slide">
+  <div class="num-big">05</div>
+  <h2>Studi Kasus Sektoral</h2>
+  <p style="font-family:var(--font-mono);font-size:0.52em;color:color-mix(in oklch,var(--primary-foreground) 55%,transparent);margin-top:10px;letter-spacing:0.12em;text-transform:uppercase">Kesehatan · Pendidikan · Ritel & Pemerintah</p>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 11 — HEALTH ══════════════════════════ -->
+<section>
+<div class="slide-split">
+  <div class="split-left" style="border-right-color:var(--red)">
+    <div class="eyebrow" style="color:var(--red)">Sektor Kesehatan</div>
+    <h2 class="slide-title">Efisiensi <span style="color:var(--red)">vs</span><br>Privasi Pasien</h2>
+    <ul class="bullets" style="font-size:0.92em">
+      <li><strong>Reservasi & Antrian</strong> → <span style="color:var(--teal)">Cloud OK</span>
+        <span class="sub">Tidak mengandung data medis sensitif</span>
+      </li>
+      <li><strong>Rekam Medis & Diagnosis</strong> → <span style="color:var(--red)">Lokal WAJIB</span>
+        <span class="sub">Dilindungi UU PDP, tidak boleh keluar jaringan</span>
+      </li>
+      <li><strong>Telemedicine Daerah Terpencil</strong> → <span style="color:var(--gold)">Lokal Mandiri</span>
+        <span class="sub">Koneksi putus-nyambung, harus bisa offline</span>
+      </li>
+    </ul>
+  </div>
+  <div class="split-right">
+    <div style="padding:28px;background:var(--background);border:1px solid var(--border);height:100%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center">
+      <p style="font-family:var(--font-mono);font-size:0.5em;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:14px">✦ Studi Kasus Nyata · Indonesia</p>
+      <h3 style="font-family:var(--font-sans);font-size:1.1em;color:var(--text);margin-bottom:10px">FDC Dental — Cloud AI untuk Reservasi</h3>
+      <p style="font-size:0.8em;color:var(--muted);line-height:1.6;margin-bottom:20px">Menggunakan Google Kubernetes Engine (GKE) + Gemini/Vertex AI untuk sistem reservasi non-medis. Hasilnya:</p>
+      <div class="stat-row" style="gap:12px">
+        <div class="stat-box" style="padding:16px">
+          <div class="num" style="font-size:2em">15<span style="font-size:0.5em">dtk</span></div>
+          <div class="label">Waktu respons keluhan</div>
+        </div>
+        <div class="stat-box" style="padding:16px">
+          <div class="num" style="font-size:2em;color:var(--muted);text-decoration:line-through">60<span style="font-size:0.5em">mnt</span></div>
+          <div class="label">Sebelum implementasi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 12 — EDUCATION ══════════════════════════ -->
+<section>
+<div class="slide-split">
+  <div class="split-left" style="border-right-color:var(--green)">
+    <div class="eyebrow" style="color:var(--green)">Sektor Pendidikan</div>
+    <h2 class="slide-title">Personalisasi<br><span style="color:var(--green)">vs Etika Data</span></h2>
+    <ul class="bullets" style="font-size:0.92em">
+      <li><strong>Pemantauan Kemajuan Murid</strong> → <span style="color:var(--teal)">Cloud</span>
+        <span class="sub">Hyper-personalization tingkat soal secara real-time</span>
+      </li>
+      <li><strong>Data Pribadi & Penilaian Esai</strong> → <span style="color:var(--red)">Lokal Wajib</span>
+        <span class="sub">Tidak boleh disedot ke cloud komersial</span>
+      </li>
+      <li><strong>AI hanya sebagai Co-Pilot</strong>
+        <span class="sub">Tidak boleh menggantikan peran emosional guru</span>
+      </li>
+      <li><strong>NPU Laptop (Copilot+ PC)</strong> → <span style="color:var(--gold)">Ideal Ruang Kelas</span>
+        <span class="sub">AI lokal hemat daya, tanpa transfer data ke luar</span>
+      </li>
+    </ul>
+  </div>
+  <div class="split-right">
+    <div style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:16px">
+      <div style="padding:20px;border:1px solid rgba(34,197,94,0.25);background:rgba(34,197,94,0.05)">
+        <p style="font-family:var(--font-mono);font-size:0.5em;color:var(--green);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:8px">Contoh Implementasi</p>
+        <h4 style="font-family:var(--font-sans);font-size:0.9em;color:var(--text);margin-bottom:6px">Intel ReadToMe · India</h4>
+        <p style="font-size:0.75em;color:var(--muted);line-height:1.5;margin:0">Konversi ucapan ke teks terstruktur di sekolah pedesaan pemerintah India. <strong style="color:var(--text)">Biaya cloud per murid: $0.</strong> Berjalan offline dengan chip NPU mandiri.</p>
+      </div>
+      <div style="padding:20px;border:1px solid rgba(240,180,41,0.25);background:rgba(240,180,41,0.05)">
+        <p style="font-family:var(--font-mono);font-size:0.5em;color:var(--gold);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:8px">Lokal · UNESA Surabaya</p>
+        <h4 style="font-family:var(--font-sans);font-size:0.9em;color:var(--text);margin-bottom:6px">Lab Virtual (VILAB)</h4>
+        <p style="font-size:0.75em;color:var(--muted);line-height:1.5;margin:0">Laboratorium Virtual interaktif untuk simulasi edukasi — kemandirian belajar tanpa infrastruktur server raksasa.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 13 — RETAIL ══════════════════════════ -->
+<section>
+<div class="slide-full">
+  <div class="eyebrow">Sektor Ritel & Pemerintah</div>
+  <h2 class="slide-title">Hiperpersonalisasi & Transparansi Birokrasi</h2>
+  <div class="card-grid-2">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div class="card teal">
+        <h3 class="card-title" style="color:var(--teal)">🛒 Ritel — AI Cloud</h3>
+        <p>Menganalisis jutaan data pergerakan selera konsumen dan ramalan iklim untuk optimasi stok sebelum musim pembelian. Kamera AI mandiri (Edge Vision) menghitung stok etalase otomatis.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">💬 Asisten Produk 24/7</h3>
+        <p>AI cloud menjawab pertanyaan produk kapan pun tanpa jemu. Rekomendasi personal meningkatkan konversi vs pencarian manual standar.</p>
+      </div>
+    </div>
+    <div style="padding:24px;background:var(--accent);border:1px solid var(--border);border-radius:var(--radius)">
+      <p style="font-family:var(--font-mono);font-size:0.5em;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:14px">✦ Inovasi Pemerintah Daerah</p>
+      <h3 style="font-family:var(--font-sans);font-size:1.05em;color:var(--text);margin-bottom:10px">Satu Data Banyumas — Arsitektur RAG</h3>
+      <p style="font-size:0.8em;color:var(--muted);line-height:1.65;margin-bottom:16px">Platform pencarian cerdas berbasis <strong style="color:var(--text)">Retrieval-Augmented Generation (RAG)</strong> mengubah gudang dokumen kewilayahan yang terpisah-pisah menjadi sumber pelayanan publik yang dinamis.</p>
+      <ul class="bullets" style="font-size:0.8em">
+        <li>Menghancurkan sekat administratif antar departemen</li>
+        <li>Dokumen statis → sumber informasi dinamis</li>
+        <li>Publik dapat navigasi data tanpa tumpukan map laci</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ DIVIDER 6 ══════════════════════════ -->
+<section>
+<div class="slide-full divider-slide">
+  <div class="num-big">06</div>
+  <h2>Strategi Hibrida</h2>
+  <p style="font-family:var(--font-mono);font-size:0.52em;color:color-mix(in oklch,var(--primary-foreground) 55%,transparent);margin-top:10px;letter-spacing:0.12em;text-transform:uppercase">Framework perutean tugas cerdas</p>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 14 — ROUTING TABLE ══════════════════════════ -->
+<section>
+<div class="slide-full">
+  <div class="eyebrow">Framework Perutean</div>
+  <h2 class="slide-title">Tugas Mana ke Mana?</h2>
+  <table class="slide-table" style="font-size:0.82em">
+    <thead>
+      <tr>
+        <th>Jenis Tugas</th>
+        <th>Rekomendasi</th>
+        <th>Alasan Utama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ekstraksi data faktur harian</td>
+        <td><span class="badge badge-local">AI Lokal</span></td>
+        <td>Data finansial privat + volume tinggi + komputasi ringan</td>
+      </tr>
+      <tr>
+        <td>Analisis dokumen legal kompleks</td>
+        <td><span class="badge badge-hybrid">Hibrida Privat</span></td>
+        <td>Perlu penalaran dalam + data klien rahasia</td>
+      </tr>
+      <tr>
+        <td>Pembuatan gambar iklan kampanye</td>
+        <td><span class="badge badge-cloud">Cloud Frontier</span></td>
+        <td>Model raksasa cloud terbaik; tidak ada data sensitif</td>
+      </tr>
+      <tr>
+        <td>Klasifikasi sentimen ulasan massal</td>
+        <td><span class="badge badge-local">Lokal Volume Tinggi</span></td>
+        <td>Tugas ringan, volume raksasa → hemat per-token</td>
+      </tr>
+      <tr>
+        <td>Asisten suara real-time</td>
+        <td><span class="badge badge-edge">Edge / On-Device</span></td>
+        <td>Latensi nol mutlak diperlukan</td>
+      </tr>
+      <tr>
+        <td>Rekam medis & diagnosis pasien</td>
+        <td><span class="badge badge-local">Lokal WAJIB</span></td>
+        <td>Kewajiban hukum UU PDP No. 27/2022</td>
+      </tr>
+      <tr>
+        <td>Riset saintifik & sintesis jurnal</td>
+        <td><span class="badge badge-cloud">Cloud Frontier</span></td>
+        <td>Membutuhkan kapasitas penalaran otak raksasa</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 15 — HYBRID ARCH ══════════════════════════ -->
+<section>
+<div class="slide-full">
+  <div class="eyebrow">Arsitektur Hibrida</div>
+  <h2 class="slide-title">Cara Kerja Sistem Hibrida</h2>
+  <div class="card-grid-3" style="margin-bottom:16px">
+    <div class="card" style="border-top-color:var(--teal)">
+      <span class="card-icon">🔍</span>
+      <h3 class="card-title" style="color:var(--teal)">1. Gatekeeper Lokal</h3>
+      <p>Model kecil (Phi/Qwen) berjalan terus 24/7 di server on-premise. Menyaring dan mengklasifikasikan setiap permintaan masuk.</p>
+    </div>
+    <div class="card">
+      <span class="card-icon">⚙️</span>
+      <h3 class="card-title">2. Proses Lokal</h3>
+      <p>Tugas sensitif & berulang diproses langsung di infrastruktur internal. <strong style="color:var(--gold)">Data tidak pernah keluar.</strong></p>
+    </div>
+    <div class="card" style="border-top-color:var(--green)">
+      <span class="card-icon">🚀</span>
+      <h3 class="card-title" style="color:var(--green)">3. Kirim ke Cloud</h3>
+      <p>Hanya tugas non-sensitif yang berat dikirim ke frontier models. Gatekeeper membuka jalur hanya untuk data yang aman.</p>
+    </div>
+  </div>
+  <div style="padding:18px 22px;background:rgba(240,180,41,0.06);border:1px solid var(--border)">
+    <p style="font-size:0.88em;line-height:1.65;color:var(--text);margin:0">
+      💡 <strong style="color:var(--gold)">Teknologi Orkestra:</strong> <span style="color:var(--muted)">vLLM sebagai sistem operasi manajemen beban paralel · Azure/Bedrock untuk managed private cloud · Edge NPU untuk perangkat pengguna</span>
+    </p>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ DIVIDER 7 ══════════════════════════ -->
+<section>
+<div class="slide-full divider-slide">
+  <div class="num-big">07</div>
+  <h2>Tantangan Lokal</h2>
+  <p style="font-family:var(--font-mono);font-size:0.52em;color:color-mix(in oklch,var(--primary-foreground) 55%,transparent);margin-top:10px;letter-spacing:0.12em;text-transform:uppercase">AI yang benar-benar memahami Indonesia</p>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 16 — LANGUAGE ══════════════════════════ -->
+<section>
+<div class="slide-split">
+  <div class="split-left" style="border-right-color:var(--teal)">
+    <div class="eyebrow" style="color:var(--teal)">Tantangan Bahasa</div>
+    <h2 class="slide-title">AI yang Paham<br><span style="color:var(--teal)">Nusantara</span></h2>
+    <p class="lead">Model global dibangun atas data bahasa Inggris. Tanpa konteks lokal, AI hanya memberikan "terjemahan kosong".</p>
+    <ul class="bullets" style="font-size:0.9em">
+      <li><strong>700+ bahasa daerah</strong> hampir tidak ada dalam dataset global</li>
+      <li><strong>Bahasa informal & gaul</strong> tidak dipahami model asing</li>
+      <li><strong>Konteks budaya lokal</strong> sering menghasilkan respons rancu</li>
+    </ul>
+  </div>
+  <div class="split-right">
+    <div style="height:100%;display:flex;flex-direction:column;justify-content:center">
+      <p style="font-family:var(--font-mono);font-size:0.5em;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:16px">Dataset Terbuka Indonesia</p>
+      <ul class="bullets" style="font-size:0.88em">
+        <li><strong>OSCAR</strong> — miliaran token domain web domestik Indonesia</li>
+        <li><strong>CC-100</strong> — arsip web komprehensif Bahasa Indonesia</li>
+        <li><strong>IndoNLI</strong> — parameter nalar natural language inferencing</li>
+        <li><strong>Wikipedia Indonesia</strong> — ensiklopedia lokal terstruktur</li>
+        <li><strong>Kaskus Archive</strong> — bahasa gaul & percakapan informal nyata</li>
+      </ul>
+      <div style="margin-top:20px;padding:14px 18px;background:rgba(240,180,41,0.08);border:1px solid var(--border)">
+        <p style="font-size:0.78em;color:var(--text);margin:0;line-height:1.5">🎯 Menyematkan dataset lokal ini adalah <strong style="color:var(--gold)">prasyarat mutlak</strong> agar AI benar-benar melayani warga Indonesia — bukan sekadar terjemahan bertenaga GPU.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 17 — CONCLUSION ══════════════════════════ -->
+<section>
+<div class="slide-full" style="background:var(--background)">
+  <div class="eyebrow">Kesimpulan Strategis</div>
+  <h2 class="slide-title" style="font-size:1.7em">Tidak Ada Pemenang Mutlak.<br><span class="accent">Ada Strategi yang Tepat.</span></h2>
+  <ol class="num-list" style="font-size:0.9em">
+    <li><div class="n">01</div><div class="body"><strong>Bukan pilihan biner</strong><span>Ini adalah masalah manajemen perutean — setiap tugas ke infrastruktur yang paling tepat</span></div></li>
+    <li><div class="n">02</div><div class="body"><strong>Data sensitif = Lokal wajib</strong><span>Rekam medis, data keuangan, IP rahasia → UU PDP No. 27/2022 tidak bisa diabaikan</span></div></li>
+    <li><div class="n">03</div><div class="body"><strong>Cloud untuk penalaran berat non-sensitif</strong><span>Analisis masif, riset ilmiah, pembuatan konten kreatif → domain frontier models</span></div></li>
+    <li><div class="n">04</div><div class="body"><strong>Strategi hibrida adalah masa depan</strong><span>Gatekeeper lokal + cloud frontier = efisiensi biaya + kedaulatan data sekaligus</span></div></li>
+    <li><div class="n">05</div><div class="body"><strong>Investasi dataset lokal = fondasi AI nusantara</strong><span>AI yang tidak paham Indonesia adalah ilusi kepintaran asing berbiaya tinggi</span></div></li>
+  </ol>
+</div>
+</section>
+
+<!-- ══════════════════════════ SLIDE 18 — CLOSING ══════════════════════════ -->
+<section>
+<div class="slide-full divider-slide" style="justify-content:center;align-items:center;text-align:center">
+  <p style="font-family:var(--font-mono);font-size:0.52em;letter-spacing:0.15em;text-transform:uppercase;color:color-mix(in oklch,var(--primary-foreground) 55%,transparent);margin-bottom:16px">Panduan Strategis Implementasi AI · 2026</p>
+  <h1 style="font-family:var(--font-sans);font-size:2.6em;font-weight:700;color:var(--primary-foreground);line-height:1.12;margin-bottom:18px;letter-spacing:-0.02em">Strategi Hibrida<br>= Solusi Terbaik</h1>
+  <p style="font-size:0.95em;color:color-mix(in oklch,var(--primary-foreground) 70%,transparent);max-width:480px;margin:0 auto;line-height:1.7">Bukan soal memilih satu infrastruktur, melainkan merancang sistem perutean cerdas yang menempatkan setiap tugas pada ekosistem yang paling tepat.</p>
+  <div style="margin-top:32px;padding:14px 28px;border:1.5px solid color-mix(in oklch,var(--primary-foreground) 25%,transparent);border-radius:var(--radius);display:inline-block">
+    <p style="font-family:var(--font-mono);font-size:0.6em;color:color-mix(in oklch,var(--primary-foreground) 55%,transparent);letter-spacing:0.1em;margin:0">← NAVIGASI DENGAN TOMBOL PANAH ATAU KLIK MENU DI BAWAH</p>
+  </div>
+</div>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<!-- Bottom Navigation -->
+<div id="slide-nav">
+  <button class="nav-dot" onclick="goSlide(0)">Beranda</button>
+  <button class="nav-dot" onclick="goSlide(1)">Agenda</button>
+  <button class="nav-dot" onclick="goSlide(3)">Cloud</button>
+  <button class="nav-dot" onclick="goSlide(4)">Lokal</button>
+  <button class="nav-dot" onclick="goSlide(5)">Hardware</button>
+  <button class="nav-dot" onclick="goSlide(7)">Kecepatan</button>
+  <button class="nav-dot" onclick="goSlide(9)">Biaya</button>
+  <button class="nav-dot" onclick="goSlide(10)">Harga</button>
+  <button class="nav-dot" onclick="goSlide(12)">Privasi</button>
+  <button class="nav-dot" onclick="goSlide(13)">Risiko</button>
+  <button class="nav-dot" onclick="goSlide(15)">Kesehatan</button>
+  <button class="nav-dot" onclick="goSlide(16)">Pendidikan</button>
+  <button class="nav-dot" onclick="goSlide(17)">Ritel</button>
+  <button class="nav-dot" onclick="goSlide(19)">Routing</button>
+  <button class="nav-dot" onclick="goSlide(20)">Hibrida</button>
+  <button class="nav-dot" onclick="goSlide(22)">Bahasa</button>
+  <button class="nav-dot" onclick="goSlide(23)">Kesimpulan</button>
+  <button class="nav-dot" onclick="goSlide(24)">Penutup</button>
+</div>
+
+<p class="key-hint">← → TOMBOL PANAH UNTUK NAVIGASI · SPACE UNTUK LANJUT</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  transition: 'slide',
+  transitionSpeed: 'fast',
+  progress: true,
+  slideNumber: false,
+  controls: true,
+  controlsTutorial: false,
+  keyboard: true,
+  overview: true,
+  width: '100%',
+  height: '100%',
+  margin: 0,
+  minScale: 0.5,
+  maxScale: 1.5,
+});
+
+function goSlide(idx) {
+  Reveal.slide(idx);
+}
+
+// Sync nav dots
+Reveal.on('slidechanged', (e) => {
+  const dots = document.querySelectorAll('.nav-dot');
+  // Find closest nav dot
+  const idx = e.indexh;
+  // Map slide index to nav dots (simplified - just active by proximity)
+  const slideToNav = {0:0,1:1,3:2,4:3,5:4,7:5,9:6,10:7,12:8,13:9,15:10,16:11,17:12,19:13,20:14,22:15,23:16,24:17};
+  dots.forEach((d, i) => d.classList.toggle('active', slideToNav[idx] === i));
+});
+</script>
+</body>
+</html>
