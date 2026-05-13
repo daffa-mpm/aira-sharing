@@ -46,7 +46,6 @@ export function NavBar({ items }: { items: NavItem[] }) {
           </button>
         ))}
       </div>
-      <p className="key-hint">&larr; &rarr; TOMBOL PANAH UNTUK NAVIGASI &middot; SPACE UNTUK LANJUT</p>
     </>
   )
 }

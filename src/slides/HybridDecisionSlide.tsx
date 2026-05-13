@@ -1,11 +1,16 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
 import { SlideTable } from '../components/Table'
 
-function CompareBar({ label, valOnPrem, valCloud, desc }: { label: string; valOnPrem: string; valCloud: string; desc: string }) {
+function CompareBar({ label, valOnPrem, valCloud, desc, higherIsBetter = true }: { label: string; valOnPrem: string; valCloud: string; desc: string; higherIsBetter?: boolean }) {
   return (
     <div style={{ marginBottom: 18 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 8 }}>
-        <strong style={{ fontSize: '0.75em', color: 'var(--foreground)' }}>{label}</strong>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <strong style={{ fontSize: '0.75em', color: 'var(--foreground)' }}>{label}</strong>
+          <span style={{ fontSize: '0.52em', color: 'var(--green)', fontWeight: 600, letterSpacing: '0.05em' }}>
+            {higherIsBetter ? '↑ lebih tinggi lebih baik' : '↓ lebih rendah lebih baik'}
+          </span>
+        </div>
         <span style={{ fontSize: '0.58em', color: 'var(--muted-foreground)' }}>{desc}</span>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -81,10 +86,10 @@ export function HybridDecisionSlide() {
           </div>
 
           {/* Comparative Bars */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             <CompareBar label="Privasi & Kontrol" valOnPrem="95%" valCloud="40%" desc="Keamanan Data" />
             <CompareBar label="Kualitas Reasoning" valOnPrem="60%" valCloud="95%" desc="Kecerdasan Model" />
-            <CompareBar label="Biaya per Volume" valOnPrem="85%" valCloud="50%" desc="Efisiensi Skala Besar" />
+            <CompareBar label="Biaya per Volume" valOnPrem="30%" valCloud="85%" desc="Efisiensi Skala Besar" higherIsBetter={false} />
             <CompareBar label="Kecepatan Deploy" valOnPrem="45%" valCloud="95%" desc="Time to Market" />
           </div>
 

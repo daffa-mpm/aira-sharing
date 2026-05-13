@@ -1,3 +1,15 @@
+/* ═══ SLIDE LOGO WATERMARK ═══ */
+.slide-logo {
+  position: fixed;
+  bottom: 64px;
+  left: 24px;
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
+  z-index: 100;
+  pointer-events: none;
+}
+
 /* ═══ RESET & BASE ═══ */
 :root {
   --background: oklch(0.9607 0.0017 247.8395);
@@ -322,6 +334,10 @@ h3.card-title {
 }
 .stat-box {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 22px 20px;
@@ -452,7 +468,7 @@ h3.card-title {
 
 /* ═══ CONTROLS STYLE ═══ */
 .reveal .controls {
-  bottom: 56px !important;
+  bottom: 3px !important;
   z-index: 60 !important;
 }
 .reveal .controls button {

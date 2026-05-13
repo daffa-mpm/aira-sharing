@@ -10,6 +10,7 @@ import { HeroSlide } from './slides/HeroSlide'
 import { ObjectiveSlide, AgendaSlide } from './slides/ObjectiveSlide'
 import { GenAISlide } from './slides/GenAISlide'
 import { GenAIEvolutionSlide } from './slides/GenAIEvolutionSlide'
+import { AgenticAISlide } from './slides/AgenticAISlide'
 import { PromptingSlide } from './slides/PromptingSlide'
 import { PromptingFrameworkSlide } from './slides/PromptingFrameworkSlide'
 import { PromptingExamplesSlide } from './slides/PromptingExamplesSlide'
@@ -22,28 +23,31 @@ import { AksaraSlide } from './slides/AksaraSlide'
 import { OnPremModelsSlide } from './slides/OnPremModelsSlide'
 import { HybridDecisionSlide } from './slides/HybridDecisionSlide'
 import { TaraSlide } from './slides/TaraSlide'
+import { PortalAiraSlide } from './slides/PortalAiraSlide'
 import { SvaraSlide } from './slides/SvaraSlide'
 import { TakeawaysSlide } from './slides/TakeawaysSlide'
 import { ClosingSlide } from './slides/ClosingSlide'
+import logoUrl from '../assets/logo.png'
 
 const navItems = [
   { label: 'Beranda', slideIndex: 0 },
   { label: 'Objective', slideIndex: 1 },
   { label: 'Agenda', slideIndex: 2 },
   { label: 'Gen AI', slideIndex: 4 },
-  { label: 'Prompting', slideIndex: 6 },
-  { label: 'Cara Kerja', slideIndex: 10 },
-  { label: 'RAG', slideIndex: 11 },
-  { label: 'Ekosistem', slideIndex: 13 },
-  { label: 'Hybrid', slideIndex: 14 },
-  { label: 'Arsitektur', slideIndex: 15 },
-  { label: 'On-prem', slideIndex: 16 },
-  { label: 'Model', slideIndex: 17 },
-  { label: 'Keputusan', slideIndex: 18 },
-  { label: 'Portal', slideIndex: 19 },
-  { label: 'Apps', slideIndex: 20 },
-  { label: 'Takeaways', slideIndex: 21 },
-  { label: 'Penutup', slideIndex: 22 },
+  { label: 'Agentic', slideIndex: 6 },
+  { label: 'Prompting', slideIndex: 7 },
+  { label: 'Cara Kerja', slideIndex: 11 },
+  { label: 'RAG', slideIndex: 12 },
+  { label: 'Ekosistem', slideIndex: 14 },
+  { label: 'Hybrid', slideIndex: 15 },
+  { label: 'Arsitektur', slideIndex: 16 },
+  { label: 'On-prem', slideIndex: 17 },
+  { label: 'Model', slideIndex: 18 },
+  { label: 'Keputusan', slideIndex: 19 },
+  { label: 'Portal', slideIndex: 21 },
+  { label: 'Apps', slideIndex: 23 },
+  { label: 'Takeaways', slideIndex: 24 },
+  { label: 'Penutup', slideIndex: 25 },
 ]
 
 export default function App() {
@@ -100,6 +104,7 @@ export default function App() {
   return (
     <>
       <div className="reveal" ref={deckRef}>
+        <img src={logoUrl} alt="AIRA" className="slide-logo" />
         <div className="slides">
           {/* 0 */}
           <HeroSlide />
@@ -114,38 +119,44 @@ export default function App() {
           {/* 5 */}
           <GenAIEvolutionSlide />
           {/* 6 */}
-          <PromptingSlide />
+          <AgenticAISlide />
           {/* 7 */}
-          <PromptingFrameworkSlide />
+          <PromptingSlide />
           {/* 8 */}
-          <PromptingExamplesSlide />
+          <PromptingFrameworkSlide />
           {/* 9 */}
-          <DividerSlide num="02" title="Cara Kerja Gen AI" subtitle="Dari pertanyaan user sampai jawaban yang terasa natural" />
+          <PromptingExamplesSlide />
           {/* 10 */}
-          <HowItWorksSlide />
+          <DividerSlide num="02" title="Cara Kerja Gen AI" subtitle="Dari pertanyaan user sampai jawaban yang terasa natural" />
           {/* 11 */}
-          <RAGSlide />
+          <HowItWorksSlide />
           {/* 12 */}
-          <DividerSlide num="03" title="Ekosistem AIRA" subtitle="On-prem LLM, Portal AIRA, AIRA Apps dalam satu alur yang utuh" />
+          <RAGSlide />
           {/* 13 */}
+          <DividerSlide num="03" title="Ekosistem AIRA" subtitle="On-prem LLM, Portal AIRA, AIRA Apps dalam satu alur yang utuh" />
+          {/* 14 */}
           <AIRAFrameworkSlide />
-          {/* 14 — Hybrid intro / kenapa on-prem */}
+          {/* 15 — Hybrid intro / kenapa on-prem */}
           <WhyOnPremSlide />
-          {/* 15 — Arsitektur hybrid */}
+          {/* 16 — Arsitektur hybrid */}
           <HybridArchitectureSlide />
-          {/* 16 — Cloud vs On-Prem perbandingan */}
+          {/* 17 — Cloud vs On-Prem perbandingan */}
           <AksaraSlide />
-          {/* 17 — Model & infra on-prem */}
+          {/* 18 — Model & infra on-prem */}
           <OnPremModelsSlide />
-          {/* 18 — Decision framework */}
+          {/* 19 — Decision framework */}
           <HybridDecisionSlide />
-          {/* 19 */}
-          <TaraSlide />
-          {/* 20 */}
-          <SvaraSlide />
+          {/* 20 — Portal AIRA divider */}
+          <DividerSlide num="04" title="Portal AIRA" subtitle="Hub terpusat untuk seluruh aplikasi AI di MPM" />
           {/* 21 */}
-          <TakeawaysSlide />
+          <TaraSlide />
           {/* 22 */}
+          <PortalAiraSlide />
+          {/* 23 */}
+          <SvaraSlide />
+          {/* 24 */}
+          <TakeawaysSlide />
+          {/* 25 */}
           <ClosingSlide />
         </div>
       </div>

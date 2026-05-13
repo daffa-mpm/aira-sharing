@@ -70,19 +70,9 @@ export function GenAIEvolutionSlide() {
           ))}
         </div>
 
-        {/* Agentic AI component breakdown */}
-        <div style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 10, padding: '14px 20px', border: '1px solid var(--green)', borderRadius: 'var(--radius)', background: 'color-mix(in oklch, var(--green) 4%, transparent)' }}>
-          <div style={{ fontSize: '1.1em', flexShrink: 0 }}>🧩</div>
-          <div style={{ fontSize: '0.76em', lineHeight: 1.55, color: 'var(--muted-foreground)' }}>
-            <strong style={{ color: 'var(--green)' }}>Komponen Agentic AI:</strong>{' '}
-            <span className="highlight green">Goal</span>{' → '}
-            <span className="highlight">Planner</span>{' → '}
-            <span className="highlight teal">Memory</span>{' → '}
-            <span className="highlight green">Tools / API</span>{' → '}
-            <span className="highlight">Executor</span>{' → '}
-            <span className="highlight teal">Evaluator</span>{' → '}
-            <span className="highlight red">Human Approval</span>
-          </div>
+        <div className="callout-row green" style={{ marginTop: 16 }}>
+          <div className="callout-icon">🧩</div>
+          <div className="callout-text">Bagaimana <strong>Agentic AI</strong> bisa melakukan semua hal itu ?</div>
         </div>
       </div>
     </section>

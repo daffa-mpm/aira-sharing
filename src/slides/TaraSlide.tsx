@@ -19,8 +19,8 @@ export function TaraSlide() {
             <p>Akses terintegrasi dengan Single Sign-On (SSO) perusahaan, sehingga hanya karyawan MPM yang dapat mengakses portal dan menggunakan aplikasinya.</p>
           </Card>
           <Card variant="teal">
-            <CardTitle color="var(--teal)">Kemudahan Eksplorasi</CardTitle>
-            <p>UI yang ramah membebaskan pengguna dari keharusan menghafal URL spesifik masing-masing aplikasi AI yang tersebar di beragam departemen.</p>
+            <CardTitle color="var(--teal)">Katalog Terpusat</CardTitle>
+            <p>Seluruh aplikasi AI tersedia dalam satu antarmuka terorganisir, tanpa perlu menghafal URL atau mencari ke berbagai departemen secara terpisah.</p>
           </Card>
         </CardGrid2>
 
