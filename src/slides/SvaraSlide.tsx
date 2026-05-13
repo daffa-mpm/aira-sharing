@@ -1,4 +1,5 @@
 import { Eyebrow, SlideTitle } from '../components/Typography'
+import { Logo } from '../components/Logo'
 
 const apps = [
   { name: 'Legal Talk', div: 'Corp. Secretary', desc: 'Chatbot untuk pertanyaan kebijakan internal MPM', icon: '⚖️', color: 'var(--primary)' },
@@ -16,6 +17,7 @@ const apps = [
 export function SvaraSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-full" style={{ justifyContent: 'flex-start', paddingTop: 44 }}>
         <Eyebrow color="var(--green)">AIRA Apps</Eyebrow>
         <SlideTitle style={{ fontSize: '1.7em' }}>

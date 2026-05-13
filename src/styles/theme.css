@@ -1,12 +1,12 @@
 /* ═══ SLIDE LOGO WATERMARK ═══ */
 .slide-logo {
   position: fixed;
-  bottom: 64px;
-  left: 24px;
+  top: 18px;
+  right: 24px;
   width: 120px;
   height: auto;
   opacity: 0.9;
-  z-index: 100;
+  z-index: 5;
   pointer-events: none;
 }
 

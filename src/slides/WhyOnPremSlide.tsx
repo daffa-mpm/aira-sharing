@@ -1,9 +1,11 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
+import { Logo } from '../components/Logo'
 import { NumberedList, NumberedItem } from '../components/NumberedList'
 
 export function WhyOnPremSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         <div className="split-left" style={{ borderRightColor: 'var(--teal)' }}>
           <Eyebrow color="var(--teal)">DATA SOVEREIGNTY</Eyebrow>

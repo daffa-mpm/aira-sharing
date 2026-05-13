@@ -1,4 +1,5 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
+import { Logo } from '../components/Logo'
 
 export function HowItWorksSlide() {
   const steps = [
@@ -10,6 +11,7 @@ export function HowItWorksSlide() {
 
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         <div className="split-left" style={{ borderRightColor: 'var(--teal)' }}>
           <Eyebrow>Cara Kerja</Eyebrow>

@@ -1,10 +1,12 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
+import { Logo } from '../components/Logo'
 import { Card, CardGrid3, CardIcon, CardTitle } from '../components/Card'
 import { StatRow, StatBox } from '../components/StatBox'
 
 export function AIRAFrameworkSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-full">
         <Eyebrow>Ekosistem AIRA</Eyebrow>
         <SlideTitle>

@@ -1,9 +1,10 @@
 import { Eyebrow, SlideTitle } from '../components/Typography'
 import { SlideTable } from '../components/Table'
-
+import { Logo } from '../components/Logo'
 export function AksaraSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         <div className="split-left" style={{ borderRightColor: 'var(--teal)' }}>
           <Eyebrow color="var(--teal)">PERBANDINGAN</Eyebrow>

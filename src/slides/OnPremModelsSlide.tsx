@@ -1,6 +1,7 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
 import { Card, CardTitle } from '../components/Card'
 import { StatRow, StatBox } from '../components/StatBox'
+import { Logo } from '../components/Logo'
 
 const models = [
   {
@@ -22,6 +23,7 @@ const models = [
 export function OnPremModelsSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         <div className="split-left" style={{ borderRightColor: 'var(--teal)' }}>
           <Eyebrow color="var(--teal)">MODEL ON-PREM</Eyebrow>

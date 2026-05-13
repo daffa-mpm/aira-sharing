@@ -1,4 +1,5 @@
 import { Eyebrow, SlideTitle } from '../components/Typography'
+import { Logo } from '../components/Logo'
 
 const nodes = [
   { icon: '🤝', title: 'Human + AI', desc: 'AI mempercepat, manusia mengarahkan & memutuskan', color: 'var(--teal)' },
@@ -11,6 +12,7 @@ const nodes = [
 export function TakeawaysSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         {/* Left: Title + central orb */}
         <div className="split-left" style={{ alignItems: 'center', textAlign: 'center', justifyContent: 'center', padding: '48px 36px' }}>

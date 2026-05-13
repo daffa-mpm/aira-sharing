@@ -1,4 +1,5 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
+import { Logo } from '../components/Logo'
 
 const stages = [
   {
@@ -30,6 +31,7 @@ const stages = [
 export function GenAIEvolutionSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-full" style={{ justifyContent: 'flex-start', paddingTop: 44 }}>
         <Eyebrow>Evolusi Gen AI</Eyebrow>
         <SlideTitle style={{ fontSize: '1.7em' }}>

@@ -1,5 +1,6 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
 import { SlideTable } from '../components/Table'
+import { Logo } from '../components/Logo'
 
 function CompareBar({ label, valOnPrem, valCloud, desc, higherIsBetter = true }: { label: string; valOnPrem: string; valCloud: string; desc: string; higherIsBetter?: boolean }) {
   return (
@@ -34,6 +35,7 @@ function CompareBar({ label, valOnPrem, valCloud, desc, higherIsBetter = true }:
 export function HybridDecisionSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         <div className="split-left" style={{ borderRightColor: 'var(--teal)' }}>
           <Eyebrow color="var(--teal)">DECISION FRAMEWORK</Eyebrow>

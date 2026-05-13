@@ -1,6 +1,9 @@
+import { Logo } from '../components/Logo'
+
 export function ClosingSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-full divider-slide" style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
         <p style={{
           fontFamily: 'var(--font-mono)',

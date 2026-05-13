@@ -1,4 +1,5 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
+import { Logo } from '../components/Logo'
 
 const components = [
   { label: 'Goal', desc: 'Menerima instruksi tingkat tinggi dari user', icon: '🎯', color: 'var(--green)' },
@@ -13,6 +14,7 @@ const components = [
 export function AgenticAISlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         <div className="split-left" style={{ borderRightColor: 'var(--green)' }}>
           <Eyebrow color="var(--green)">Deep Dive</Eyebrow>

@@ -1,8 +1,10 @@
 import { Eyebrow, SlideTitle, Lead } from "../components/Typography";
+import { Logo } from "../components/Logo";
 
 export function GenAISlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         <div className="split-left">
           <Eyebrow>Generative AI</Eyebrow>
@@ -101,7 +103,6 @@ export function GenAISlide() {
             gap: 0,
           }}
         >
-          <div className="float-label">Kapabilitas</div>
           <div
             style={{
               display: "flex",

@@ -1,8 +1,10 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
+import { Logo } from '../components/Logo'
 
 export function HybridArchitectureSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         {/* Left: explanation */}
         <div className="split-left" style={{ borderRightColor: 'var(--teal)' }}>

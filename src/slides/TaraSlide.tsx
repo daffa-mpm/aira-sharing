@@ -1,9 +1,11 @@
 import { Eyebrow, SlideTitle } from '../components/Typography'
 import { Card, CardGrid2, CardTitle } from '../components/Card'
+import { Logo } from '../components/Logo'
 
 export function TaraSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-full">
         <Eyebrow>PORTAL AIRA</Eyebrow>
         <SlideTitle>

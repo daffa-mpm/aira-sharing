@@ -27,7 +27,6 @@ import { PortalAiraSlide } from './slides/PortalAiraSlide'
 import { SvaraSlide } from './slides/SvaraSlide'
 import { TakeawaysSlide } from './slides/TakeawaysSlide'
 import { ClosingSlide } from './slides/ClosingSlide'
-import logoUrl from '../assets/logo.png'
 
 const navItems = [
   { label: 'Beranda', slideIndex: 0 },
@@ -104,7 +103,6 @@ export default function App() {
   return (
     <>
       <div className="reveal" ref={deckRef}>
-        <img src={logoUrl} alt="AIRA" className="slide-logo" />
         <div className="slides">
           {/* 0 */}
           <HeroSlide />

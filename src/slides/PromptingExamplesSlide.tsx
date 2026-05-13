@@ -1,8 +1,10 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
+import { Logo } from '../components/Logo'
 
 export function PromptingExamplesSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-full">
         <Eyebrow>Studi Kasus</Eyebrow>
         <SlideTitle>Prompt Dasar vs <span className="accent">Prompt Terstruktur</span></SlideTitle>

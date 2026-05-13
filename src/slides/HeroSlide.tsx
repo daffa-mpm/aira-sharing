@@ -1,9 +1,11 @@
 import { SlideTitle, HeroTag } from '../components/Typography'
 import { StatRow, StatBox } from '../components/StatBox'
+import { Logo } from '../components/Logo'
 
 export function HeroSlide() {
   return (
     <section>
+      <Logo />
       <style>{`
         /* Float Animation untuk Glass Cards di kanan agar tetap hidup setelah tampil */
         .hero-float-1 { animation: airaFloat 6s ease-in-out infinite; }

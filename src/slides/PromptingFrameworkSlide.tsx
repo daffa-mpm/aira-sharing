@@ -1,8 +1,10 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
+import { Logo } from '../components/Logo'
 
 export function PromptingFrameworkSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         <div className="split-left">
           <Eyebrow>Framework</Eyebrow>

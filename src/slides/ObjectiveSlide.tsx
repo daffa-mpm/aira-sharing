@@ -1,9 +1,11 @@
 import { Eyebrow, SlideTitle } from '../components/Typography'
 import { Card, CardGrid3, CardIcon, CardTitle } from '../components/Card'
+import { Logo } from '../components/Logo'
 
 export function ObjectiveSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-split">
         <div className="split-left">
           <Eyebrow>Objective</Eyebrow>
@@ -54,6 +56,7 @@ export function ObjectiveSlide() {
 export function AgendaSlide() {
   return (
     <section>
+      <Logo />
       <div className="slide-full">
         <Eyebrow>Agenda</Eyebrow>
 
