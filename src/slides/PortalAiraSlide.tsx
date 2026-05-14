@@ -3,7 +3,7 @@ import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
 export function PortalAiraSlide() {
   return (
     <section>
-      <div className="slide-split">
+      <div className="slide-split" style={{ gridTemplateColumns: '0.65fr 1.25fr' }}>
         <div className="split-left" style={{ borderRightColor: 'var(--primary)' }}>
           <Eyebrow>Portal AIRA</Eyebrow>
           <SlideTitle>

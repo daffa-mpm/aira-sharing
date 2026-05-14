@@ -1,11 +1,12 @@
 import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
 import { Logo } from '../components/Logo'
+import genAiAndRagUrl from '../../assets/genai_and_rag.png'
 
 export function RAGSlide() {
   return (
     <section>
       <Logo />
-      <div className="slide-split">
+      <div className="slide-split" style={{ gridTemplateColumns: '0.65fr 1.25fr' }}>
         {/* Left: explanation */}
         <div className="split-left" style={{ borderRightColor: 'var(--green)' }}>
           <Eyebrow color="var(--green)">Knowledge MPM</Eyebrow>
@@ -38,36 +39,19 @@ export function RAGSlide() {
           </div>
         </div>
         {/* Right: visual comparison */}
-        <div className="split-right" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '40px 44px' }}>
-          {/* Without RAG */}
-          <div style={{ marginBottom: 24 }}>
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.5em', letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--red)', marginBottom: 10 }}>❌ Tanpa RAG</div>
-            <div className="prompt-terminal" style={{ fontSize: '0.9em' }}>
-              <div className="prompt-terminal-bar">
-                <span className="dot"></span><span className="dot"></span><span className="dot"></span>
-              </div>
-              <div className="prompt-terminal-body" style={{ padding: '14px 18px' }}>
-                <div className="prompt-line">Apa benefit rawat jalan di MPM?</div>
-                <div className="ai-line">Benefit rawat jalan meliputi kamar, obat, dan biaya dokter.</div>
-                <div className="comment">⚠ Jawaban generik, bisa salah</div>
-              </div>
-            </div>
-          </div>
-
-          {/* With RAG */}
-          <div>
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.5em', letterSpacing: '0.12em', textTransform: 'uppercase' as const, color: 'var(--green)', marginBottom: 10 }}>✅ Dengan RAG</div>
-            <div className="prompt-terminal" style={{ fontSize: '0.9em', border: '1px solid var(--green)' }}>
-              <div className="prompt-terminal-bar">
-                <span className="dot"></span><span className="dot"></span><span className="dot"></span>
-                <span className="title">+ dokumen HR MPM</span>
-              </div>
-              <div className="prompt-terminal-body" style={{ padding: '14px 18px' }}>
-                <div className="prompt-line">Apa benefit rawat jalan di MPM?</div>
-                <div className="ai-line">Sesuai HR Policy Pasal 12, benefit rawat jalan meliputi biaya obat, injeksi, fisioterapi, dan biaya dokter.</div>
-                <div className="comment">✓ Akurat, bisa ditelusuri sumbernya</div>
-              </div>
-            </div>
+        <div className="split-right" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '28px 32px' }}>
+          <div style={{
+            border: '1px solid color-mix(in oklch, var(--green) 20%, transparent)',
+            borderRadius: 'calc(var(--radius) + 4px)',
+            overflow: 'hidden',
+            background: 'var(--card)',
+            boxShadow: 'var(--shadow-md)',
+          }}>
+            <img
+              src={genAiAndRagUrl}
+              alt="Perbandingan Generative AI tanpa RAG dan Generative AI dengan RAG"
+              style={{ display: 'block', width: '100%', height: 'auto' }}
+            />
           </div>
         </div>
       </div>

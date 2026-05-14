@@ -1,12 +1,13 @@
 import { Eyebrow, SlideTitle } from '../components/Typography'
 import { Card, CardGrid3, CardIcon, CardTitle } from '../components/Card'
 import { Logo } from '../components/Logo'
+import objectiveDiagramUrl from '../../assets/aira_as_gap_genai.png'
 
 export function ObjectiveSlide() {
   return (
     <section>
       <Logo />
-      <div className="slide-split">
+      <div className="slide-split" style={{ gridTemplateColumns: '0.65fr 1.25fr' }}>
         <div className="split-left">
           <Eyebrow>Objective</Eyebrow>
           <SlideTitle>Mengapa <span className="accent">AIRA</span>?</SlideTitle>
@@ -22,30 +23,19 @@ export function ObjectiveSlide() {
             </p>
           </div>
         </div>
-        <div className="split-right" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 32, padding: '40px 36px' }}>
-          <div className="feature-row">
-            <div className="icon-circle gold">🎯</div>
-            <div className="feature-content">
-              <h4>Fokus ke Gen AI</h4>
-              <p>Pemahaman praktis tentang Generative AI dan bagaimana teknologi ini membantu pekerjaan sehari-hari di MPM.</p>
-            </div>
-          </div>
-          <div className="feature-row">
-            <div className="icon-circle teal">💡</div>
-            <div className="feature-content">
-              <h4>Arah Implementasi</h4>
-              <p>Membantu tiap divisi melihat kapan Gen AI layak dipakai, kapan perlu on-prem, dan seperti apa use case yang realistis.</p>
-            </div>
-          </div>
-          <div className="feature-row">
-            <div className="icon-circle green">🔗</div>
-            <div className="feature-content">
-              <h4>Ekosistem AI Terpadu</h4>
-              <p>
-                AIRA menghubungkan LLM, portal internal, dan aplikasi AI
-                dalam satu fondasi yang bisa berkembang bertahap di MPM.
-              </p>
-            </div>
+        <div className="split-right" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 18, padding: '28px 32px' }}>
+          <div style={{
+            border: '1px solid color-mix(in oklch, var(--primary) 18%, transparent)',
+            borderRadius: 'calc(var(--radius) + 4px)',
+            overflow: 'hidden',
+            background: 'var(--card)',
+            boxShadow: 'var(--shadow-md)',
+          }}>
+            <img
+              src={objectiveDiagramUrl}
+              alt="Diagram AIRA yang menjembatani hype Generative AI menjadi dampak bisnis terukur"
+              style={{ display: 'block', width: '100%', height: 'auto' }}
+            />
           </div>
         </div>
       </div>

@@ -147,7 +147,7 @@ export default function App() {
           {/* 20 — Portal AIRA divider */}
           <DividerSlide num="04" title="Portal AIRA" subtitle="Hub terpusat untuk seluruh aplikasi AI di MPM" />
           {/* 21 */}
-          <TaraSlide />
+          {/* <TaraSlide /> */}
           {/* 22 */}
           <PortalAiraSlide />
           {/* 23 */}

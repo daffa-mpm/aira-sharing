@@ -2,8 +2,8 @@ import { Eyebrow, SlideTitle } from '../components/Typography'
 import { Logo } from '../components/Logo'
 
 const apps = [
-  { name: 'Legal Talk', div: 'Corp. Secretary', desc: 'Chatbot untuk pertanyaan kebijakan internal MPM', icon: '⚖️', color: 'var(--primary)' },
-  { name: 'HaloTSD', div: 'Technical Service', desc: 'Chatbot untuk pertanyaan seputar technical service', icon: '🔧', color: 'var(--teal)' },
+  // { name: 'Legal Talk', div: 'Corp. Secretary', desc: 'Chatbot untuk pertanyaan kebijakan internal MPM', icon: '⚖️', color: 'var(--primary)' },
+  // { name: 'HaloTSD', div: 'Technical Service', desc: 'Chatbot untuk pertanyaan seputar technical service', icon: '🔧', color: 'var(--teal)' },
   { name: 'ArsipLM', div: 'IT Division', desc: 'Riset, ringkasan sumber, dan penyusunan draft dokumen dengan AI', icon: '📂', color: 'var(--green)' },
   { name: 'Wicara', div: 'IT Division', desc: 'Latihan bahasa lewat percakapan AI dengan feedback instan', icon: '🗣️', color: 'var(--primary)' },
   { name: 'PriksaData', div: 'IT Division', desc: 'Verifikasi dokumen otomatis berdasarkan referensi yang diunggah', icon: '📋', color: 'var(--teal)' },
