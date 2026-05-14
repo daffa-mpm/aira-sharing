@@ -2,11 +2,24 @@ import { Eyebrow, SlideTitle } from '../components/Typography'
 import { Logo } from '../components/Logo'
 
 const nodes = [
-  { icon: '🤝', title: 'Human + AI', desc: 'AI mempercepat, manusia mengarahkan & memutuskan', color: 'var(--teal)' },
-  { icon: '✍️', title: 'Prompt = Hasil', desc: 'Instruksi jelas & spesifik → jawaban berkualitas', color: 'var(--primary)' },
-  { icon: '📚', title: 'RAG & Knowledge', desc: 'AI + dokumen MPM = jawaban akurat sesuai policy', color: 'var(--green)' },
-  { icon: '🏗️', title: 'Ekosistem AIRA', desc: 'On-prem LLM + Portal + Apps, satu fondasi utuh', color: 'var(--primary)' },
-  { icon: '🔀', title: 'Hybrid by Design', desc: 'Sensitif → on-prem, eksplorasi → cloud, semua via IT', color: 'var(--teal)' },
+  {
+    icon: '🏗️',
+    title: 'AI sebagai Ekosistem',
+    desc: 'AIRA bukan satu chatbot tunggal, tetapi fondasi on-prem dan cloud yang memungkinkan berbagai aplikasi AI spesifik untuk kebutuhan tiap divisi.',
+    color: 'var(--primary)',
+  },
+  {
+    icon: '🔒',
+    title: 'Keamanan Data Prioritas',
+    desc: 'Data sensitif tetap diproses di server internal melalui on-prem, sedangkan kreativitas dan riset umum bisa memanfaatkan kecepatan cloud.',
+    color: 'var(--teal)',
+  },
+  {
+    icon: '✍️',
+    title: 'Adopsi Dimulai dari Skill',
+    desc: 'Teknologi AI hanya berguna jika manusia mampu mengoperasikannya. Framework RIFT menjadi standar baru karyawan MPM untuk berkomunikasi dengan AI.',
+    color: 'var(--green)',
+  },
 ]
 
 export function TakeawaysSlide() {
@@ -18,7 +31,7 @@ export function TakeawaysSlide() {
         <div className="split-left" style={{ alignItems: 'center', textAlign: 'center', justifyContent: 'center', padding: '48px 36px' }}>
           <Eyebrow>Key Takeaways</Eyebrow>
           <SlideTitle style={{ fontSize: '1.6em', marginBottom: 28, textAlign: 'center' }}>
-            Mindmap<br /><span className="accent">AIRA untuk MPM</span>
+            Tiga Pesan Inti<br /><span className="accent">AIRA untuk MPM</span>
           </SlideTitle>
 
           {/* Central orb */}
@@ -34,7 +47,7 @@ export function TakeawaysSlide() {
           </div>
 
           <div className="info-box teal" style={{ marginTop: 28, textAlign: 'left', maxWidth: 380 }}>
-            <p style={{ fontSize: '0.78em' }}><strong>Intinya:</strong> AIRA = cara kerja baru, dari kesiapan data hingga dampak nyata di setiap workflow.</p>
+            <p style={{ fontSize: '0.78em' }}><strong>Jika hanya ingat 3 hal:</strong> AIRA adalah ekosistem, keamanan data dijaga lewat hybrid approach, dan keberhasilan adopsi dimulai dari skill prompting.</p>
           </div>
         </div>
 

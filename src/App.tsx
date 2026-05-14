@@ -22,10 +22,11 @@ import { HybridArchitectureSlide } from './slides/HybridArchitectureSlide'
 import { AksaraSlide } from './slides/AksaraSlide'
 import { OnPremModelsSlide } from './slides/OnPremModelsSlide'
 import { HybridDecisionSlide } from './slides/HybridDecisionSlide'
-import { TaraSlide } from './slides/TaraSlide'
+// import { TaraSlide } from './slides/TaraSlide'
 import { PortalAiraSlide } from './slides/PortalAiraSlide'
 import { SvaraSlide } from './slides/SvaraSlide'
 import { TakeawaysSlide } from './slides/TakeawaysSlide'
+import { QuoteSlide } from './slides/QuoteSlide'
 import { ClosingSlide } from './slides/ClosingSlide'
 
 const navItems = [
@@ -44,8 +45,8 @@ const navItems = [
   { label: 'Model', slideIndex: 18 },
   { label: 'Keputusan', slideIndex: 19 },
   { label: 'Portal', slideIndex: 21 },
-  { label: 'Apps', slideIndex: 23 },
-  { label: 'Takeaways', slideIndex: 24 },
+  { label: 'Apps', slideIndex: 22 },
+  { label: 'Takeaways', slideIndex: 23 },
   { label: 'Penutup', slideIndex: 25 },
 ]
 
@@ -147,13 +148,13 @@ export default function App() {
           {/* 20 — Portal AIRA divider */}
           <DividerSlide num="04" title="Portal AIRA" subtitle="Hub terpusat untuk seluruh aplikasi AI di MPM" />
           {/* 21 */}
-          {/* <TaraSlide /> */}
-          {/* 22 */}
           <PortalAiraSlide />
-          {/* 23 */}
+          {/* 22 */}
           <SvaraSlide />
-          {/* 24 */}
+          {/* 23 */}
           <TakeawaysSlide />
+          {/* 24 */}
+          <QuoteSlide />
           {/* 25 */}
           <ClosingSlide />
         </div>

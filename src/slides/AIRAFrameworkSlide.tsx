@@ -1,4 +1,4 @@
-import { Eyebrow, SlideTitle, Lead } from '../components/Typography'
+import { Eyebrow, SlideTitle } from '../components/Typography'
 import { Logo } from '../components/Logo'
 import arsitekturAiraUrl from '../../assets/arsitektur_aira.png'
 
